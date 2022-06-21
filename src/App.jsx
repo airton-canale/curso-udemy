@@ -10,11 +10,12 @@ import Aletorio from "./components/basicos/Aleatorio";
 import Familia from "./components/basicos/Familia";
 import FamiliaMembro from "./components/basicos/FamiliaMembro";
 import Card from "./components/layout/Card";
-import ParOuImpar from "./components/repeticao/Condicional/ParOuImpar";
-import UsuarioInfo from "./components/repeticao/Condicional/UsuarioInfo";
+import ParOuImpar from "./components/repeticao/condicional/ParOuImpar";
+import UsuarioInfo from "./components/repeticao/condicional/UsuarioInfo";
 import DiretaPai from "./components/basicos/comunicacao/DiretaPai";
 import IndiretaPai from "./components/basicos/comunicacao/IndiretaPai";
-
+import Input from "./components/formulario/Input";
+import Contador from "./components/contador/Contador";
 
 
 export default function App() {
@@ -22,6 +23,15 @@ export default function App() {
     <div>
       <h1>Fundamentos React</h1>
       <div className="Cards">
+
+      <Card titulo="#12 Contador" color= "#FFD940" >
+         <Contador numeroInicial={10}/>
+         
+        </Card>
+      <Card titulo="#11 Componente Controlado (Input)" color= "#123548" >
+         <Input/>
+         
+        </Card>
 
       <Card titulo="#10 Comunicacao Indireta" color= "#853699" >
          <IndiretaPai/>
@@ -32,7 +42,7 @@ export default function App() {
          
         </Card>
         
-      <Card titulo="#8 Renderizacao Condicional" color= "#988314" >
+      <Card titulo="#8 Renderizacao Condicional" color= "#424242" >
          <ParOuImpar numero = {205}/>
          <UsuarioInfo usuario= {{nome:"Fernando"}} />
          <UsuarioInfo usuario= {{nome:"Fernan"}} />

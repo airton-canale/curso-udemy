@@ -1,23 +1,18 @@
-// const elseChild = ({children, child}) => {
-//   children.filter(child => {
-//     return child.type && child.type.name === "Else"
-//   })[0]
+const If = ({test,children}) => {
 
-export default props => {
-
-  const elseChild = props.children.filter(child => {
+  const elseChild = children.filter(child => {
     return child.type && child.type.name === "Else"
   })[0]
 
-  const ifChildren = props.children.filter(child => {
+  const ifChildren = children.filter(child => {
      return child !== elseChild
   })
 
-  if (props.test) {
+  if (test) {
   return ifChildren;
   } else if (elseChild){
   return elseChild
   }
 }
 export const Else = ({children}) =>children
-// export default elseChild
+export default If
