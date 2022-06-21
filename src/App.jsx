@@ -10,12 +10,13 @@ import Aletorio from "./components/basicos/Aleatorio";
 import Familia from "./components/basicos/Familia";
 import FamiliaMembro from "./components/basicos/FamiliaMembro";
 import Card from "./components/layout/Card";
-import ParOuImpar from "./components/repeticao/condicional/ParOuImpar";
-import UsuarioInfo from "./components/repeticao/condicional/UsuarioInfo";
-import DiretaPai from "./components/basicos/comunicacao/DiretaPai";
-import IndiretaPai from "./components/basicos/comunicacao/IndiretaPai";
+import ParOuImpar from "./components/condicional/ParOuImpar";
+import UsuarioInfo from "./components/condicional/UsuarioInfo";
+import DiretaPai from "./components/comunicacao/DiretaPai";
+import IndiretaPai from "./components/comunicacao/IndiretaPai";
 import Input from "./components/formulario/Input";
 import Contador from "./components/contador/Contador";
+import Mega from "./components/Mega/Mega"
 
 
 export default function App() {
@@ -23,6 +24,10 @@ export default function App() {
     <div>
       <h1>Fundamentos React</h1>
       <div className="Cards">
+
+      <Card titulo="#13 Desafio Mega" color= "#123548" >
+         <Mega/>
+         </Card>
 
       <Card titulo="#12 Contador" color= "#FFD940" >
          <Contador numeroInicial={10}/>
